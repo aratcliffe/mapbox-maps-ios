@@ -17,6 +17,9 @@ import Turf
 ///   - lineOpacity: The opacity of the arc (0.0–1.0). Defaults to `0.8`.
 ///   - lineDashArray: Dash pattern as `[dashLength, gapLength]` in multiples of line width.
 ///     Defaults to `[4.0, 2.0]`.
+///   - slot: The slot in which to place the arc layer. Use `Slot(rawValue:)` with Standard style
+///     slot names (`"bottom"`, `"middle"`, `"top"`), or a custom `Slot` from a `SlotLayer`.
+///     Defaults to `nil` (declaration order).
 struct ArcAnnotation: MapStyleContent {
     var start: CLLocationCoordinate2D
     var end: CLLocationCoordinate2D
@@ -24,6 +27,7 @@ struct ArcAnnotation: MapStyleContent {
     var lineWidth: Double
     var lineOpacity: Double
     var lineDashArray: [Double]
+    var layerSlot: Slot?
 
     private let arcID: String
 
@@ -34,7 +38,8 @@ struct ArcAnnotation: MapStyleContent {
         lineColor: StyleColor = StyleColor("#007AFC"),
         lineWidth: Double = 3.0,
         lineOpacity: Double = 0.8,
-        lineDashArray: [Double] = [4.0, 2.0]
+        lineDashArray: [Double] = [4.0, 2.0],
+        slot: Slot? = nil
     ) {
         self.start = start
         self.end = end
@@ -42,6 +47,7 @@ struct ArcAnnotation: MapStyleContent {
         self.lineWidth = lineWidth
         self.lineOpacity = lineOpacity
         self.lineDashArray = lineDashArray
+        self.layerSlot = slot
         self.arcID = id ?? "\(start.latitude),\(start.longitude)-\(end.latitude),\(end.longitude)"
     }
 
@@ -62,7 +68,7 @@ struct ArcAnnotation: MapStyleContent {
         layer.lineDasharray = .constant(lineDashArray)
         layer.lineCap = .constant(.round)
         layer.lineJoin = .constant(.round)
-        layer.slot = .top
+        layer.slot = layerSlot
         return layer
     }
 }

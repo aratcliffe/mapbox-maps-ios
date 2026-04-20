@@ -19,7 +19,7 @@ struct ArcAnnotationExample: View {
             bearing: 85,
             pitch: 0
         )) {
-            ArcAnnotation(start: origin, end: destination)
+            ArcAnnotation(start: origin, end: destination, slot: .top)
 
             CircleAnnotation(centerCoordinate: origin)
                 .circleRadius(8)
