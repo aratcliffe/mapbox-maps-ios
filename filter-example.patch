@@ -1,0 +1,1118 @@
+diff --git a/Examples.xcodeproj/project.pbxproj b/Examples.xcodeproj/project.pbxproj
+index f017886dcb..8573d53f43 100644
+--- a/Examples.xcodeproj/project.pbxproj
++++ b/Examples.xcodeproj/project.pbxproj
+@@ -4,8 +4,6 @@
+ 	classes = {
+ 	};
+ 	objectVersion = 63;
+-	objectVersion = 54;
+-	objectVersion = 77;
+ 	objects = {
+ 
+ /* Begin PBXBuildFile section */
+@@ -38,8 +36,7 @@
+ 		2997D21A7DB20098C6D03D3B /* StandardStyleImportExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640198169EEDFC7CBEFCFCCF /* StandardStyleImportExample.swift */; };
+ 		2B44F3E8EF3A50D9AE6B825F /* route.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 450C8D5E4B84428FE51BCA97 /* route.geojson */; };
+ 		2C03342240D5487880316518 /* AddOneMarkerSymbolExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE814694CF08A9C2E4A42 /* AddOneMarkerSymbolExample.swift */; platformFilter = ios; };
+-		2C03342240D5487880316518 /* AddOneMarkerSymbolExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE814694CF08A9C2E4A42 /* AddOneMarkerSymbolExample.swift */; platformFilters = (ios, ); };
+-		2D3DF43CEE3D4C2B0B012E0E /* IndoorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1109CA9B9EDD4DEB302501A /* IndoorExample.swift */; platformFilters = (ios, ); };
++		2D3DF43CEE3D4C2B0B012E0E /* IndoorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1109CA9B9EDD4DEB302501A /* IndoorExample.swift */; platformFilter = ios; };
+ 		2EC3AAE5D54ACFB90E98CD43 /* ElevatedLineMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBD2991186A6B98F730454 /* ElevatedLineMapView.swift */; };
+ 		30589E5AB307FC934E466332 /* radar2.gif in Resources */ = {isa = PBXBuildFile; fileRef = D8730F8FB259A4F889609108 /* radar2.gif */; };
+ 		312CE7CED726F0A572301622 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC3D7884D057238010CB6E4 /* PinView.swift */; };
+@@ -90,6 +87,7 @@
+ 		655105BD0FAFF4C4BA65DC32 /* ExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE19F00E87B31FDE5481D56 /* ExamplesTests.swift */; platformFilter = ios; };
+ 		65E9F2B993AEB394FC2D0080 /* ColorThemeMapExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F519EC4AF0B4BEE0FDCABC /* ColorThemeMapExample.swift */; platformFilter = ios; };
+ 		6661DB69D4980E24BCA18AB2 /* PolygonAnnotationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBE4524A8793B4DE950533 /* PolygonAnnotationExample.swift */; platformFilter = ios; };
++		66D0D8BE2ED5129C000EF3D3 /* FilterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D0D8BD2ED5129C000EF3D3 /* FilterExample.swift */; };
+ 		68FD9E1F4606B2729BA1E6DC /* SnapshotterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588FD640D91E9DD366703F7B /* SnapshotterExample.swift */; platformFilter = ios; };
+ 		6B040F65241ABF600D70D14D /* Custom3DPuckExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C957F9CA07061B793C2DD4A /* Custom3DPuckExample.swift */; platformFilter = ios; };
+ 		7036A19FCD2CCE85BDDF4E00 /* TrackingModeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E598A16FA446F583344CB /* TrackingModeExample.swift */; platformFilter = ios; };
+@@ -257,7 +255,7 @@
+ 		3BCB1CC4577300FEF4DE017B /* InsetMapExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetMapExample.swift; sourceTree = "<group>"; };
+ 		3BDE7738CA55957F3FAC3ECE /* LineAnnotationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineAnnotationExample.swift; sourceTree = "<group>"; };
+ 		3DCA3CFE97357EF7D190E2A2 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+-		3E2F68B22AFF73A71F86CABC /* ExamplesUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ExamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
++		3E2F68B22AFF73A71F86CABC /* ExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+ 		3E3A0CCD53B02FF2BAD830A2 /* CameraAnimationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAnimationExample.swift; sourceTree = "<group>"; };
+ 		3F6F479FB7FFD90FA95F400E /* IconSizeChangeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSizeChangeExample.swift; sourceTree = "<group>"; };
+ 		3FB717239BBFE5103C1EB1A4 /* AdvancedViewportGesturesExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedViewportGesturesExample.swift; sourceTree = "<group>"; };
+@@ -275,7 +273,7 @@
+ 		524D79FF01638A0E8A3C1248 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+ 		53174DC9A736F4866BB1D37B /* RadarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarContentView.swift; sourceTree = "<group>"; };
+ 		588FD640D91E9DD366703F7B /* SnapshotterExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotterExample.swift; sourceTree = "<group>"; };
+-		590D83805AA598D2B0A7638A /* ExamplesTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
++		590D83805AA598D2B0A7638A /* ExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+ 		59AACE9E33102AE90526569F /* ViewAnnotationsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnnotationsExample.swift; sourceTree = "<group>"; };
+ 		5C0C8783B2A74AE9DE3F6C32 /* CustomLayerExampleShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CustomLayerExampleShaders.metal; sourceTree = "<group>"; };
+ 		5C1658938A5F0908D151A9B9 /* CircleAnnotationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnnotationExample.swift; sourceTree = "<group>"; };
+@@ -289,6 +287,7 @@
+ 		640198169EEDFC7CBEFCFCCF /* StandardStyleImportExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardStyleImportExample.swift; sourceTree = "<group>"; };
+ 		65535FB9F190778001AB847A /* MapScrollExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScrollExample.swift; sourceTree = "<group>"; };
+ 		65AB4D202692A8951BAF2D57 /* RuntimeSlotsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeSlotsExample.swift; sourceTree = "<group>"; };
++		66D0D8BD2ED5129C000EF3D3 /* FilterExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterExample.swift; sourceTree = "<group>"; };
+ 		67FA937DC17F7EA27931763A /* RasterTileSourceExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RasterTileSourceExample.swift; sourceTree = "<group>"; };
+ 		6A090EE21C9A65BE2697868F /* NavigationSimulatorExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSimulatorExample.swift; sourceTree = "<group>"; };
+ 		6BB52F9D3A810B1A9CEC832C /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+@@ -387,7 +386,7 @@
+ 		F000C4D3B6FC70FA9607E3A3 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+ 		F033C8EFB89A90D6705B047D /* GeoJSONSourceExample.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = GeoJSONSourceExample.geojson; sourceTree = "<group>"; };
+ 		F0A6063E57EC170F558A3F74 /* ExampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
+-		F0CE51977FA6E83B6F11BE5C /* Examples.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
++		F0CE51977FA6E83B6F11BE5C /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+ 		F1109CA9B9EDD4DEB302501A /* IndoorExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndoorExample.swift; sourceTree = "<group>"; };
+ 		F1356FEA44593D43FBC3F74B /* ColorPaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
+ 		F26EC4DB977D4C2DDBCA1924 /* MarkersExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkersExample.swift; sourceTree = "<group>"; };
+@@ -510,6 +509,7 @@
+ 				46CE3D9C2873C0767DD76D85 /* ClusteringExample.swift */,
+ 				29DD4C2F0049E575A6B5BF66 /* ColorThemeExample.swift */,
+ 				7DED80ACD1618F8EE8F95A4A /* CustomGeometrySourceExample.swift */,
++				66D0D8BD2ED5129C000EF3D3 /* FilterExample.swift */,
+ 				C61CC711054A032EE0446036 /* DynamicStylingExample.swift */,
+ 				09BBD2991186A6B98F730454 /* ElevatedLineMapView.swift */,
+ 				A6B06A1D70F479D8DC5C375A /* FeaturesQueryExample.swift */,
+@@ -886,8 +886,6 @@
+ 				AC4B0DE570C38B503D03669A /* XCRemoteSwiftPackageReference "Fingertips" */,
+ 				4F0A03F138FCA51E80A1893D /* XCLocalSwiftPackageReference "." */,
+ 			);
+-			preferredProjectObjectVersion = 54;
+-			preferredProjectObjectVersion = 77;
+ 			projectDirPath = "";
+ 			projectRoot = "";
+ 			targets = (
+@@ -1000,6 +998,7 @@
+ 				79B889CF23A3C0A5EA7F6ADD /* ApplicationCarPlaySceneDelegage.swift in Sources */,
+ 				32FA2A4133B0464494212B34 /* Array+Split.swift in Sources */,
+ 				50641F1F3A58B85873E2E5B8 /* AttributionDialogueExamples.swift in Sources */,
++				66D0D8BE2ED5129C000EF3D3 /* FilterExample.swift in Sources */,
+ 				A3D7C0836BFE6FEB40C3C15A /* BasicLocationPulsingExample.swift in Sources */,
+ 				D4FFFAE49D4B805BDA014AAD /* BasicMapExample.swift in Sources */,
+ 				B53EA441C54E2B680A7E99F0 /* BuildingExtrusionsExample.swift in Sources */,
+@@ -1274,7 +1273,7 @@
+ 				GCC_WARN_UNUSED_FUNCTION = YES;
+ 				GCC_WARN_UNUSED_LABEL = YES;
+ 				GCC_WARN_UNUSED_VARIABLE = YES;
+-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
++				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+ 				LD_GENERATE_MAP_FILE = YES;
+ 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+ 				MTL_FAST_MATH = YES;
+@@ -1327,7 +1326,7 @@
+ 				INFOPLIST_FILE = Sources/Examples/Info.plist;
+ 				INFOPLIST_PREFIX_HEADER = "$(DERIVED_FILE_DIR)/InfoPlist.Prefix.h";
+ 				INFOPLIST_PREPROCESS = YES;
+-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
++				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+ 				LD_RUNPATH_SEARCH_PATHS = (
+ 					"$(inherited)",
+ 					"@executable_path/Frameworks",
+@@ -1414,7 +1413,7 @@
+ 				GCC_WARN_UNUSED_FUNCTION = YES;
+ 				GCC_WARN_UNUSED_LABEL = YES;
+ 				GCC_WARN_UNUSED_VARIABLE = YES;
+-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
++				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+ 				LD_GENERATE_MAP_FILE = YES;
+ 				MTL_ENABLE_DEBUG_INFO = NO;
+ 				MTL_FAST_MATH = YES;
+@@ -1442,7 +1441,7 @@
+ 				INFOPLIST_FILE = Sources/Examples/Info.plist;
+ 				INFOPLIST_PREFIX_HEADER = "$(DERIVED_FILE_DIR)/InfoPlist.Prefix.h";
+ 				INFOPLIST_PREPROCESS = YES;
+-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
++				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+ 				LD_RUNPATH_SEARCH_PATHS = (
+ 					"$(inherited)",
+ 					"@executable_path/Frameworks",
+diff --git a/Sources/Examples/Models/Examples.swift b/Sources/Examples/Models/Examples.swift
+index e4d0c95b91..b57a68a462 100644
+--- a/Sources/Examples/Models/Examples.swift
++++ b/Sources/Examples/Models/Examples.swift
+@@ -11,173 +11,283 @@ import MapboxMaps
+ struct Examples {
+     // Examples that show how to get started with Mapbox, such as creating a basic map view or setting a style once.
+     static let gettingStartedExamples: [Example] = .init {
+-        Example(title: "Display a map view",
+-                description: "Create and display a map that uses the default Mapbox Standard style.",
+-                type: BasicMapExample.self)
+-        Example(title: "Standard Style",
+-                description: "Use the Standard style and modify settings at runtime.",
+-                type: StandardStyleExample.self)
+-        Example(title: "Debug Map",
+-                description: "This example shows how the map looks with different debug options.",
+-                type: DebugMapExample.self)
++        Example(
++            title: "Display a map view",
++            description:
++                "Create and display a map that uses the default Mapbox Standard style.",
++            type: BasicMapExample.self
++        )
++        Example(
++            title: "Standard Style",
++            description:
++                "Use the Standard style and modify settings at runtime.",
++            type: StandardStyleExample.self
++        )
++        Example(
++            title: "Debug Map",
++            description:
++                "This example shows how the map looks with different debug options.",
++            type: DebugMapExample.self
++        )
+     }
+ 
+     // Examples that show how to use 3D terrain or fill extrusions.
+     static let threeDExamples: [Example] = .init {
+-        Example(title: "SceneKit rendering on map",
+-                description: "Use a custom layer to render a SceneKit model over terrain.",
+-                type: SceneKitExample.self)
+-        Example(title: "Display 3D buildings",
+-                description: "Extrude the building layer in the Mapbox Light style using FillExtrusionLayer and set up the light position.",
+-                type: BuildingExtrusionsExample.self)
+-        Example(title: "Add a sky layer",
+-                description: "Add a customizable sky layer to simulate natural lighting with a Terrain layer.",
+-                type: SkyLayerExample.self)
+-        Example(title: "Display a 3D model in a model layer",
+-                description: "Showcase the usage of a 3D model layer.",
+-                type: ModelLayerExample.self)
+-        Example(title: "3D Lights",
+-                description: "Configure lights in 3D environment.",
+-                type: Lights3DExample.self)
++        Example(
++            title: "SceneKit rendering on map",
++            description:
++                "Use a custom layer to render a SceneKit model over terrain.",
++            type: SceneKitExample.self
++        )
++        Example(
++            title: "Display 3D buildings",
++            description:
++                "Extrude the building layer in the Mapbox Light style using FillExtrusionLayer and set up the light position.",
++            type: BuildingExtrusionsExample.self
++        )
++        Example(
++            title: "Add a sky layer",
++            description:
++                "Add a customizable sky layer to simulate natural lighting with a Terrain layer.",
++            type: SkyLayerExample.self
++        )
++        Example(
++            title: "Display a 3D model in a model layer",
++            description: "Showcase the usage of a 3D model layer.",
++            type: ModelLayerExample.self
++        )
++        Example(
++            title: "3D Lights",
++            description: "Configure lights in 3D environment.",
++            type: Lights3DExample.self
++        )
+     }
+ 
+     // Examples that focus on annotations.
+     static let annotationExamples: [Example] = .init {
+-        Example(title: "Add a polygon annotation",
+-                description: "Add a polygon annotation to the map.",
+-                type: PolygonAnnotationExample.self)
+-        Example(title: "Add a marker symbol",
+-                description: "Add a red teardrop-shaped marker image to a style and display it on the map using a SymbolLayer.",
+-                type: AddOneMarkerSymbolExample.self)
+-        Example(title: "Add Circle Annotations",
+-                description: "Show circle annotations on a map.",
+-                type: CircleAnnotationExample.self)
+-        Example(title: "Add Cluster Symbol Annotations",
+-                description: "Show fire hydrants in Washington DC area in a cluster using a symbol layer.",
+-                type: SymbolClusteringExample.self)
+-        Example(title: "Add Cluster Point Annotations",
+-                description: "Show fire hydrants in Washington DC area in a cluster using point annotations.",
+-                type: PointAnnotationClusteringExample.self)
+-        Example(title: "Add markers to a map",
+-                description: "Add markers that use different icons.",
+-                type: AddMarkersSymbolExample.self)
+-        Example(title: "Add Point Annotation",
+-                description: "Show custom point annotation on a map.",
+-                type: CustomPointAnnotationExample.self)
+-        Example(title: "Add Polyline annotations",
+-                description: "Show polyline annotations on a map.",
+-                type: LineAnnotationExample.self)
+-        Example(title: "Animate Marker Position",
+-                description: "Animate updates to a marker/annotation's position.",
+-                type: AnimatedMarkerExample.self)
+-        Example(title: "Change icon size",
+-                description: "Change icon size with Symbol layer.",
+-                type: IconSizeChangeExample.self)
+-        Example(title: "Draw multiple geometries",
+-                description: "Draw multiple shapes on a map.",
+-                type: MultipleGeometriesExample.self)
+-        Example(title: "View annotation with point annotation",
+-                description: "Add view annotation to a point annotation.",
+-                type: ViewAnnotationWithPointAnnotationExample.self)
+-        Example(title: "View annotations: basic example",
+-                description: "Add view annotation on a map with a click.",
+-                type: ViewAnnotationBasicExample.self)
+-        Example(title: "View annotations: advanced example",
+-                description: "Add view annotations anchored to a symbol layer feature.",
+-                type: ViewAnnotationMarkerExample.self)
+-        Example(title: "View annotations: Frame list of annotations",
+-                description: "Animates to camera framing the list of selected view annotations.",
+-                type: FrameViewAnnotationsExample.self)
+-        Example(title: "View annotations: animation",
+-                description: "Animate a view annotation along a route.",
+-                testTimeout: 60,
+-                type: ViewAnnotationAnimationExample.self)
+-        Example(title: "Dynamic view annotations",
+-                description: "Use Dynamic view annotations, Style, and the Viewport API to create a navigation experience.",
+-                type: DynamicViewAnnotationExample.self)
++        Example(
++            title: "Add a polygon annotation",
++            description: "Add a polygon annotation to the map.",
++            type: PolygonAnnotationExample.self
++        )
++        Example(
++            title: "Add a marker symbol",
++            description:
++                "Add a red teardrop-shaped marker image to a style and display it on the map using a SymbolLayer.",
++            type: AddOneMarkerSymbolExample.self
++        )
++        Example(
++            title: "Add Circle Annotations",
++            description: "Show circle annotations on a map.",
++            type: CircleAnnotationExample.self
++        )
++        Example(
++            title: "Add Cluster Symbol Annotations",
++            description:
++                "Show fire hydrants in Washington DC area in a cluster using a symbol layer.",
++            type: SymbolClusteringExample.self
++        )
++        Example(
++            title: "Add Cluster Point Annotations",
++            description:
++                "Show fire hydrants in Washington DC area in a cluster using point annotations.",
++            type: PointAnnotationClusteringExample.self
++        )
++        Example(
++            title: "Add markers to a map",
++            description: "Add markers that use different icons.",
++            type: AddMarkersSymbolExample.self
++        )
++        Example(
++            title: "Add Point Annotation",
++            description: "Show custom point annotation on a map.",
++            type: CustomPointAnnotationExample.self
++        )
++        Example(
++            title: "Add Polyline annotations",
++            description: "Show polyline annotations on a map.",
++            type: LineAnnotationExample.self
++        )
++        Example(
++            title: "Animate Marker Position",
++            description: "Animate updates to a marker/annotation's position.",
++            type: AnimatedMarkerExample.self
++        )
++        Example(
++            title: "Change icon size",
++            description: "Change icon size with Symbol layer.",
++            type: IconSizeChangeExample.self
++        )
++        Example(
++            title: "Draw multiple geometries",
++            description: "Draw multiple shapes on a map.",
++            type: MultipleGeometriesExample.self
++        )
++        Example(
++            title: "View annotation with point annotation",
++            description: "Add view annotation to a point annotation.",
++            type: ViewAnnotationWithPointAnnotationExample.self
++        )
++        Example(
++            title: "View annotations: basic example",
++            description: "Add view annotation on a map with a click.",
++            type: ViewAnnotationBasicExample.self
++        )
++        Example(
++            title: "View annotations: advanced example",
++            description:
++                "Add view annotations anchored to a symbol layer feature.",
++            type: ViewAnnotationMarkerExample.self
++        )
++        Example(
++            title: "View annotations: Frame list of annotations",
++            description:
++                "Animates to camera framing the list of selected view annotations.",
++            type: FrameViewAnnotationsExample.self
++        )
++        Example(
++            title: "View annotations: animation",
++            description: "Animate a view annotation along a route.",
++            testTimeout: 60,
++            type: ViewAnnotationAnimationExample.self
++        )
++        Example(
++            title: "Dynamic view annotations",
++            description:
++                "Use Dynamic view annotations, Style, and the Viewport API to create a navigation experience.",
++            type: DynamicViewAnnotationExample.self
++        )
+     }
+ 
+     // Examples that focus on setting, animating, or otherwise changing the map's camera and viewport.
+     static let cameraExamples: [Example] = .init {
+-        Example(title: "Use custom camera animations",
+-                description: """
++        Example(
++            title: "Use custom camera animations",
++            description: """
+                     Animate the map camera to a new position using camera animators. Individual camera properties such as zoom, bearing, and center coordinate can be animated independently.
+                 """,
+-                type: CameraAnimatorsExample.self)
+-        Example(title: "Use camera animations",
+-                description: "Use ease(to:) to animate updates to the camera's position.",
+-                type: CameraAnimationExample.self)
+-        Example(title: "Viewport",
+-                description: "Viewport camera showcase.",
+-                type: ViewportExample.self)
+-        Example(title: "Advanced viewport gestures",
+-                description: "Viewport configured to allow gestures.",
+-                type: AdvancedViewportGesturesExample.self)
+-        Example(title: "Filter symbols based on pitch and distance",
+-                description: "Use pitch and distance-from-center expressions in the filter field of a symbol layer to remove large size POI labels in the far distance at high pitch.",
+-                type: PitchAndDistanceExample.self)
+-        Example(title: "Add an inset map",
+-                description: "Add a smaller inset map that visualizes the viewport of the main map.",
+-                type: InsetMapExample.self)
+-        Example(title: "Use camera(for:) bounding coordinates",
+-                description: "Use camera(for:) bounding coordinaters",
+-                type: CameraForExample.self)
++            type: CameraAnimatorsExample.self
++        )
++        Example(
++            title: "Use camera animations",
++            description:
++                "Use ease(to:) to animate updates to the camera's position.",
++            type: CameraAnimationExample.self
++        )
++        Example(
++            title: "Viewport",
++            description: "Viewport camera showcase.",
++            type: ViewportExample.self
++        )
++        Example(
++            title: "Advanced viewport gestures",
++            description: "Viewport configured to allow gestures.",
++            type: AdvancedViewportGesturesExample.self
++        )
++        Example(
++            title: "Filter symbols based on pitch and distance",
++            description:
++                "Use pitch and distance-from-center expressions in the filter field of a symbol layer to remove large size POI labels in the far distance at high pitch.",
++            type: PitchAndDistanceExample.self
++        )
++        Example(
++            title: "Add an inset map",
++            description:
++                "Add a smaller inset map that visualizes the viewport of the main map.",
++            type: InsetMapExample.self
++        )
++        Example(
++            title: "Use camera(for:) bounding coordinates",
++            description: "Use camera(for:) bounding coordinaters",
++            type: CameraForExample.self
++        )
+     }
+ 
+     // Miscellaneous examples
+     public static let labExamples: [Example] = .init {
+-        Example(title: "Resizable image",
+-                description: "Add a resizable image with cap insets to a style.",
+-                type: ResizableImageExample.self)
+-        Example(title: "Map events",
+-                description: "Print out map events and data.",
+-                type: MapEventsExample.self)
+-        Example(title: "Map recorder",
+-                description: "Record and replay map animations and actions.",
+-                type: MapRecorderExample.self)
+-        Example(title: "Resize MapView",
+-                description: "Support smooth MapView resizing animations",
+-                type: ResizeMapViewExample.self)
+-        Example(title: "Combine",
+-                description: "Shows how to use map events with Combine framework.",
+-                type: CombineExample.self)
+-        Example(title: "Color Theme Example",
+-                description: "Shows how to use color theme",
+-                type: ColorThemeMapExample.self)
+-        Example(title: "Combine location",
+-                description: "Shows how to use Combine framework to drive the location puck.",
+-                type: CombineLocationExample.self)
+-        Example(title: "Edit polygon with drag/drop",
+-                description: "Shows how to update a polygon with drag",
+-                type: EditPolygonExample.self)
+-        Example(title: "Display an indoor map",
+-                description: "Create and display a map that uses the indoor data and renders it.",
+-                type: IndoorExample.self)
++        Example(
++            title: "Resizable image",
++            description: "Add a resizable image with cap insets to a style.",
++            type: ResizableImageExample.self
++        )
++        Example(
++            title: "Map events",
++            description: "Print out map events and data.",
++            type: MapEventsExample.self
++        )
++        Example(
++            title: "Map recorder",
++            description: "Record and replay map animations and actions.",
++            type: MapRecorderExample.self
++        )
++        Example(
++            title: "Resize MapView",
++            description: "Support smooth MapView resizing animations",
++            type: ResizeMapViewExample.self
++        )
++        Example(
++            title: "Combine",
++            description: "Shows how to use map events with Combine framework.",
++            type: CombineExample.self
++        )
++        Example(
++            title: "Color Theme Example",
++            description: "Shows how to use color theme",
++            type: ColorThemeMapExample.self
++        )
++        Example(
++            title: "Combine location",
++            description:
++                "Shows how to use Combine framework to drive the location puck.",
++            type: CombineLocationExample.self
++        )
++        Example(
++            title: "Edit polygon with drag/drop",
++            description: "Shows how to update a polygon with drag",
++            type: EditPolygonExample.self
++        )
++        //        Example(title: "Display an indoor map",
++        //                description: "Create and display a map that uses the indoor data and renders it.",
++        //                type: IndoorExample.self)
+     }
+ 
+     // Examples that focus on displaying the user's location.
+     public static let locationExamples: [Example] = .init {
+-        Example(title: "Display the user's location",
+-                description: "Display the user's location on a map with the default user location puck.",
+-                type: TrackingModeExample.self)
+-        Example(title: "Basic pulsing puck",
+-                description: "Display sonar-like animation radiating from the location puck.",
+-                type: BasicLocationPulsingExample.self)
+-        Example(title: "Customize the location puck",
+-                description: "Customized the location puck on the map.",
+-                type: Custom2DPuckExample.self)
+-        Example(title: "Use a 3D model to show the user's location",
+-                description: "A 3D model is used to represent the user's location.",
+-                type: Custom3DPuckExample.self)
+-        Example(title: "Simulate navigation",
+-                description: "Simulate a driving trip from LA to San Francisco along a pre-defined route.",
+-                type: NavigationSimulatorExample.self)
++        Example(
++            title: "Display the user's location",
++            description:
++                "Display the user's location on a map with the default user location puck.",
++            type: TrackingModeExample.self
++        )
++        Example(
++            title: "Basic pulsing puck",
++            description:
++                "Display sonar-like animation radiating from the location puck.",
++            type: BasicLocationPulsingExample.self
++        )
++        Example(
++            title: "Customize the location puck",
++            description: "Customized the location puck on the map.",
++            type: Custom2DPuckExample.self
++        )
++        Example(
++            title: "Use a 3D model to show the user's location",
++            description: "A 3D model is used to represent the user's location.",
++            type: Custom3DPuckExample.self
++        )
++        Example(
++            title: "Simulate navigation",
++            description:
++                "Simulate a driving trip from LA to San Francisco along a pre-defined route.",
++            type: NavigationSimulatorExample.self
++        )
+     }
+ 
+     // Examples that highlight using the Offline APIs.
+     static let offlineExamples: [Example] = .init {
+-        Example(title: "Use OfflineManager and TileStore to download a region",
+-                description: """
++        Example(
++            title: "Use OfflineManager and TileStore to download a region",
++            description: """
+                     Shows how to use OfflineManager and TileStore to download regions
+                     for offline use.
+ 
+@@ -187,128 +297,202 @@ struct Examples {
+                     to change. Please contact Mapbox if you require a higher limit.
+                     Additional charges may apply.
+                 """,
+-                type: OfflineManagerExample.self)
++            type: OfflineManagerExample.self
++        )
+ 
+         #if DEBUG
+-        Example(title: "Use OfflineRegionManager to download a region",
+-                description: "Use the deprecated OfflineRegionManager to download regions for offline use.",
++            Example(
++                title: "Use OfflineRegionManager to download a region",
++                description:
++                    "Use the deprecated OfflineRegionManager to download regions for offline use.",
+                 testTimeout: 120,
+-                type: OfflineRegionManagerExample.self)
++                type: OfflineRegionManagerExample.self
++            )
+         #endif
+     }
+ 
+     // Examples that show how to use the map's snapshotter.
+     static let snapshotExamples: [Example] = .init {
+-        Example(title: "Create a static map snapshot",
+-                description: """
++        Example(
++            title: "Create a static map snapshot",
++            description: """
+                     Create a static, non-interactive image of a map style with specified camera position. The resulting snapshot is provided as a `UIImage`.
+                     The map on top is interactive. The bottom one is a static snapshot.
+                 """,
+-                type: SnapshotterExample.self)
+-        Example(title: "Draw on a static snapshot with Core Graphics",
+-                description: """
++            type: SnapshotterExample.self
++        )
++        Example(
++            title: "Draw on a static snapshot with Core Graphics",
++            description: """
+                     Use the overlayHandler parameter to draw on top of a snapshot
+                     using Core Graphhics APIs.
+                 """,
+-                type: SnapshotterCoreGraphicsExample.self)
++            type: SnapshotterCoreGraphicsExample.self
++        )
+     }
+ 
+     // Examples that highlight how to set or modify the map's style and its contents.
+     static let styleExamples: [Example] = .init {
+-        Example(title: "Display multiple icon images in a symbol layer",
+-                description: """
+-            Add point data and several images to a style and use the switchCase and get expressions to choose which image to display at each point in a SymbolLayer based on a data property.
+-            """,
+-                type: DataDrivenSymbolsExample.self)
+-        Example(title: "Change the position of a layer",
+-                description: "Insert a specific layer above or below other layers.",
+-                type: LayerPositionExample.self)
+-        Example(title: "Change the slot of a layer",
+-                description: "Assign a layer to a slot to make it appear above or below other layers.",
+-                type: LayerSlotExample.self)
+-        Example(title: "Cluster points within a layer",
+-                description: "Create a circle layer from a geoJSON source and cluster the points from that source. The clusters will update as the map's camera changes.",
+-                type: PointClusteringExample.self)
+-        Example(title: "Animate a line layer",
+-                description: "Animate updates to a line layer from a geoJSON source.",
+-                type: AnimateGeoJSONLineExample.self)
+-        Example(title: "Animate a style layer",
+-                description: "Animate the position of a style layer by updating its source data.",
+-                type: AnimateLayerExample.self)
+-        Example(title: "Add external vector tiles",
+-                description: "Add vector map tiles from an external source, using the {z}/{x}/{y} URL scheme.",
+-                type: ExternalVectorSourceExample.self)
+-        Example(title: "Interpolate colors between zoom level",
+-                description: """
++        Example(
++            title: "Display multiple icon images in a symbol layer",
++            description: """
++                Add point data and several images to a style and use the switchCase and get expressions to choose which image to display at each point in a SymbolLayer based on a data property.
++                """,
++            type: DataDrivenSymbolsExample.self
++        )
++        Example(
++            title: "Change the position of a layer",
++            description: "Insert a specific layer above or below other layers.",
++            type: LayerPositionExample.self
++        )
++        Example(
++            title: "Change the slot of a layer",
++            description:
++                "Assign a layer to a slot to make it appear above or below other layers.",
++            type: LayerSlotExample.self
++        )
++        Example(
++            title: "Cluster points within a layer",
++            description:
++                "Create a circle layer from a geoJSON source and cluster the points from that source. The clusters will update as the map's camera changes.",
++            type: PointClusteringExample.self
++        )
++        Example(
++            title: "Animate a line layer",
++            description:
++                "Animate updates to a line layer from a geoJSON source.",
++            type: AnimateGeoJSONLineExample.self
++        )
++        Example(
++            title: "Animate a style layer",
++            description:
++                "Animate the position of a style layer by updating its source data.",
++            type: AnimateLayerExample.self
++        )
++        Example(
++            title: "Add external vector tiles",
++            description:
++                "Add vector map tiles from an external source, using the {z}/{x}/{y} URL scheme.",
++            type: ExternalVectorSourceExample.self
++        )
++        Example(
++            title: "Interpolate colors between zoom level",
++            description: """
+                     Use an interpolate expression to style the background layer color depending on zoom level.
+                 """,
+-                type: ColorExpressionExample.self)
+-        Example(title: "Add a custom rendered layer",
+-                description: "Add a custom rendered Metal layer.",
+-                type: CustomLayerExample.self)
+-        Example(title: "Add animated weather data",
+-                description: "Load a raster image to a style using ImageSource and display it on a map as animated weather data using RasterLayer.",
+-                type: AnimateImageLayerExample.self)
+-        Example(title: "Add a raster tile source",
+-                description: "Add third-party raster tiles to a map.",
+-                type: RasterTileSourceExample.self)
+-        Example(title: "Raster colorization",
+-                description: "Display weather using raster-color.",
+-                type: RasterColorExample.self)
+-        Example(title: "Add live data",
+-                description: "Update feature coordinates from a geoJSON source in real time.",
+-                type: LiveDataExample.self)
+-        Example(title: "Join data to vector geometry",
+-                description: "Join local JSON data with vector tile geometries.",
+-                type: DataJoinExample.self)
+-        Example(title: "Use a distance expression",
+-                description: "Use a distance style expression to show features within a specific radius.",
+-                type: DistanceExpressionExample.self)
+-        Example(title: "Add custom raster source",
+-                description: "Load a custom raster source to Style and display it on a map as animated weather data using RasterLayer.",
+-                type: CustomRasterSourceExample.self)
+-        Example(title: "Runtime slots example",
+-                description: "Shows shows how to use the runtime slots.",
+-                type: RuntimeSlotsExample.self)
++            type: ColorExpressionExample.self
++        )
++        Example(
++            title: "Add a custom rendered layer",
++            description: "Add a custom rendered Metal layer.",
++            type: CustomLayerExample.self
++        )
++        Example(
++            title: "Add animated weather data",
++            description:
++                "Load a raster image to a style using ImageSource and display it on a map as animated weather data using RasterLayer.",
++            type: AnimateImageLayerExample.self
++        )
++        Example(
++            title: "Add a raster tile source",
++            description: "Add third-party raster tiles to a map.",
++            type: RasterTileSourceExample.self
++        )
++        Example(
++            title: "Raster colorization",
++            description: "Display weather using raster-color.",
++            type: RasterColorExample.self
++        )
++        Example(
++            title: "Add live data",
++            description:
++                "Update feature coordinates from a geoJSON source in real time.",
++            type: LiveDataExample.self
++        )
++        Example(
++            title: "Join data to vector geometry",
++            description: "Join local JSON data with vector tile geometries.",
++            type: DataJoinExample.self
++        )
++        Example(
++            title: "Use a distance expression",
++            description:
++                "Use a distance style expression to show features within a specific radius.",
++            type: DistanceExpressionExample.self
++        )
++        Example(
++            title: "Add custom raster source",
++            description:
++                "Load a custom raster source to Style and display it on a map as animated weather data using RasterLayer.",
++            type: CustomRasterSourceExample.self
++        )
++        Example(
++            title: "Runtime slots example",
++            description: "Shows shows how to use the runtime slots.",
++            type: RuntimeSlotsExample.self
++        )
+     }
+ 
+     // Examples that show use cases related to user interaction with the map.
+     static let userInteractionExamples: [Example] = .init {
+-        Example(title: "Standard Style Interactions",
+-                description: "Showcase of Standard style interactions.",
+-                type: StandardStyleInteractionsExample.self)
+-        Example(title: "Find features at a point",
+-                description: "Query the map for rendered features belonging to a specific layer.",
+-                type: FeaturesAtPointExample.self)
+-        Example(title: "Use feature state",
+-                description: "Manipulate map styling with feature states and expressions.",
+-                type: FeatureStateExample.self)
+-        Example(title: "Add an interactive clustered layer",
+-                description: "Display an alert controller after selecting a feature in a clustered layer.",
+-                type: SymbolClusteringExample.self)
+-        Example(title: "Long tap animation",
+-                description: "Animate camera upon a long tap.",
+-                type: LongTapAnimationExample.self)
++        Example(
++            title: "Standard Style Interactions",
++            description: "Showcase of Standard style interactions.",
++            type: StandardStyleInteractionsExample.self
++        )
++        Example(
++            title: "Find features at a point",
++            description:
++                "Query the map for rendered features belonging to a specific layer.",
++            type: FeaturesAtPointExample.self
++        )
++        Example(
++            title: "Use feature state",
++            description:
++                "Manipulate map styling with feature states and expressions.",
++            type: FeatureStateExample.self
++        )
++        Example(
++            title: "Add an interactive clustered layer",
++            description:
++                "Display an alert controller after selecting a feature in a clustered layer.",
++            type: SymbolClusteringExample.self
++        )
++        Example(
++            title: "Long tap animation",
++            description: "Animate camera upon a long tap.",
++            type: LongTapAnimationExample.self
++        )
+     }
+ 
+     // Examples that show map accessibility features
+     static let accessibilityExamples: [Example] = .init {
+-        Example(title: "Access map features using VoiceOver",
+-                description: "Use VoiceOver to highlight annotations and hear their associated features.",
+-                type: VoiceOverAccessibilityExample.self)
++        Example(
++            title: "Access map features using VoiceOver",
++            description:
++                "Use VoiceOver to highlight annotations and hear their associated features.",
++            type: VoiceOverAccessibilityExample.self
++        )
+     }
+ 
+     // Examples that display maps using the globe projection
+     static let globeAndAtmosphere: [Example] = .init {
+-        Example(title: "Fly-to camera animation",
+-                description: "Smoothly interpolate between locations with the fly-to animation.",
+-                type: GlobeFlyToExample.self)
+-        Example(title: "Create a rotating globe",
+-                description: "Display your map as an interactive, rotating globe.",
+-                type: SpinningGlobeExample.self)
+-        Example(title: "Visualize data as a heatmap",
+-                description: "Display your heatmap using the globe projection.",
+-                type: HeatmapLayerGlobeExample.self)
++        Example(
++            title: "Fly-to camera animation",
++            description:
++                "Smoothly interpolate between locations with the fly-to animation.",
++            type: GlobeFlyToExample.self
++        )
++        Example(
++            title: "Create a rotating globe",
++            description: "Display your map as an interactive, rotating globe.",
++            type: SpinningGlobeExample.self
++        )
++        Example(
++            title: "Visualize data as a heatmap",
++            description: "Display your heatmap using the globe projection.",
++            type: HeatmapLayerGlobeExample.self
++        )
+     }
+ }
+ 
+@@ -332,8 +516,10 @@ extension Examples {
+                 return examples
+             }
+             return examples.filter { example in
+-                example.title.localizedCaseInsensitiveContains(term) ||
+-                example.description.localizedCaseInsensitiveContains(term)
++                example.title.localizedCaseInsensitiveContains(term)
++                    || example.description.localizedCaseInsensitiveContains(
++                        term
++                    )
+             }
+         }
+     }
+diff --git a/Sources/Examples/SwiftUI Examples/FilterExample.swift b/Sources/Examples/SwiftUI Examples/FilterExample.swift
+index d710641faa..ce93d4c140 100644
+--- a/Sources/Examples/SwiftUI Examples/FilterExample.swift	
++++ b/Sources/Examples/SwiftUI Examples/FilterExample.swift	
+@@ -1,49 +1,78 @@
+-import SwiftUI
++import CoreLocation
+ @_spi(Experimental) import MapboxMaps
++import SwiftUI
+ import Turf
+-import CoreLocation
+ 
+ struct FilterExample: View {
+-    
+-    // MARK: - State & Constants
++
+     @State private var showFeatures: Bool = true
+-    
++
+     private let sourceID = "sf-timestamp-data"
+     private let layerID = "sf-points-layer"
+-    
+-    // We store the calculated coordinates to fit the camera later
+-    @State private var featureCoordinates: [CLLocationCoordinate2D] = []
++
++    private let sfData: FeaturesRef = FilterExample.makeSanFranciscoFeatures()
++
++    private let nov20Timestamp: Double =
++        {
++            let dateComponents = DateComponents(
++                year: 2025,
++                month: 11,
++                day: 20,
++                hour: 0,
++                minute: 0,
++                second: 0
++            )
++            return Calendar.current.date(from: dateComponents)?
++                .timeIntervalSince1970 ?? 0 * 1000
++        }() * 1000
+ 
+     var body: some View {
+-        // MapReader allows us to access the underlying map object for updates (like the toggle)
+         MapReader { proxy in
+             ZStack(alignment: .top) {
+-                
+-                // MARK: - The Map
+-                Map(initialViewport: .camera(center: CLLocationCoordinate2D(latitude: 37.77, longitude: -122.43), zoom: 10))                    
+-                    .onStyleLoaded { _ in
+-                        guard let map = proxy.map else { return }
+-                        loadDataAndLayers(into: map)
+-                        // Ensure initial visibility is applied after the layer is added on older iOS
+-                        updateLayerVisibility(map: proxy.map)
+-                    }
+-                    .ignoresSafeArea()
+-                
+-                // MARK: - UI Controls (Toggle)
++                Map(
++                    initialViewport: .camera(
++                        center: CLLocationCoordinate2D(
++                            latitude: 37.77,
++                            longitude: -122.43
++                        ),
++                        zoom: 10
++                    )
++                ) {
++                    LazyGeoJSON(id: sourceID, features: sfData)
++
++                    CircleLayer(id: layerID, source: sourceID)
++                        .circleRadius(10.0)
++                        .circleStrokeColor(.black)
++                        .circleStrokeWidth(1.5)
++                        .circleColor(UIColor.blue)
++                        .filter(
++                            Exp(.lt) {
++                                Exp(.get) { "timestamp" }
++                                nov20Timestamp
++                            }
++                        )
++
++                }
++                .onChange(of: showFeatures) {
++                    try? proxy.map?.setLayerProperty(
++                        for: layerID,
++                        property: "visibility",
++                        value: showFeatures ? "visible" : "none"
++                    )
++                }
++                .ignoresSafeArea()
+                 HStack(spacing: 12) {
+                     Text("Show/Hide Features")
+                         .foregroundColor(.black)
+                         .font(.system(size: 16, weight: .medium))
+-                    
++
+                     Toggle("", isOn: $showFeatures)
+                         .labelsHidden()
+                         .toggleStyle(SwitchToggleStyle(tint: .blue))
+-                        // Use the older onChange signature that’s available before iOS 17
+-                        .onChange(of: showFeatures) { _ in
+-                            updateLayerVisibility(map: proxy.map)
+-                        }
+                 }
+-                .padding(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
++                .padding(
++                    EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16)
++                )
+                 .background(Color.white.opacity(0.9))
+                 .cornerRadius(8)
+                 .shadow(radius: 4)
+@@ -51,86 +80,20 @@ struct FilterExample: View {
+             }
+         }
+     }
+-    
+-    // MARK: - Logic
+-    
+-    private func updateLayerVisibility(map: MapboxMap?) {
+-        guard let map = map else { return }
+-        
+-        // We update the specific layer property
+-        try? map.updateLayer(withId: layerID, type: CircleLayer.self) { layer in
+-            layer.visibility = .constant(showFeatures ? .visible : .none)
+-        }
+-    }
+-    
+-    private func loadDataAndLayers(into mapboxMap: MapboxMap) {
+-        do {
+-            // 1. Generate Data
+-            let data = makeSanFranciscoGeoJSONSource()
+-            
+-            // 2. Add Source
+-            try mapboxMap.addSource(data.source)
+-            
+-            // 3. Configure Layer
+-            var circleLayer = CircleLayer(id: layerID, source: sourceID)
+-            
+-            // Data-driven color styling
+-            circleLayer.circleColor = .expression(
+-                Exp(.match) {
+-                    Exp(.get) { "category" }
+-                    "restaurant"; UIColor.blue
+-                    "bar"; UIColor.red
+-                    UIColor.gray // default
+-                }
+-            )
+-            
+-            circleLayer.circleRadius = .constant(10.0)
+-            circleLayer.circleStrokeColor = .constant(StyleColor(.black))
+-            circleLayer.circleStrokeWidth = .constant(1.5)
+-            
+-            // Set initial visibility based on State
+-            circleLayer.visibility = .constant(showFeatures ? .visible : .none)
+-            
+-            // 4. Add Layer
+-            try mapboxMap.addLayer(circleLayer)
+-            
+-            // 5. Fit Camera (Fly to bounds)
+-            fitMapToBounds(map: mapboxMap, coordinates: data.coordinates)
+-            
+-        } catch {
+-            print("Error configuring map: \(error)")
+-        }
+-    }
+-    
+-    private func fitMapToBounds(map: MapboxMap, coordinates: [CLLocationCoordinate2D]) {
+-        guard !coordinates.isEmpty else { return }
+-        
+-        let padding = UIEdgeInsets(top: 100, left: 50, bottom: 50, right: 50)
+-        
+-        let cameraOptions = map.camera(
+-            for: coordinates,
+-            padding: padding,
+-            bearing: nil,
+-            pitch: nil
+-        )
+-        
+-        // Use the fly animation
+-        map.setCamera(to: cameraOptions) // Instant jump
+-        // Or for animation:
+-        // map.camera.fly(to: cameraOptions, duration: 2.0)
+-    }
+-    
+-    // MARK: - Data Generation Helper
+-    // (Logic copied directly from your example)
+-    private func makeSanFranciscoGeoJSONSource() -> (source: GeoJSONSource, coordinates: [CLLocationCoordinate2D]) {
++
++    private static func makeSanFranciscoFeatures() -> FeaturesRef {
+         let baseDate = Date()
+         let dayInMs: Double = 24 * 60 * 60 * 1000.0
+ 
+         let timestamps: [Double] = [
+-            baseDate.addingTimeInterval(-7 * dayInMs / 1000).timeIntervalSince1970 * 1000,
+-            baseDate.addingTimeInterval(-5 * dayInMs / 1000).timeIntervalSince1970 * 1000,
+-            baseDate.addingTimeInterval(-3 * dayInMs / 1000).timeIntervalSince1970 * 1000,
+-            baseDate.addingTimeInterval(-1 * dayInMs / 1000).timeIntervalSince1970 * 1000,
++            baseDate.addingTimeInterval(-7 * dayInMs / 1000)
++                .timeIntervalSince1970 * 1000,
++            baseDate.addingTimeInterval(-5 * dayInMs / 1000)
++                .timeIntervalSince1970 * 1000,
++            baseDate.addingTimeInterval(-3 * dayInMs / 1000)
++                .timeIntervalSince1970 * 1000,
++            baseDate.addingTimeInterval(-1 * dayInMs / 1000)
++                .timeIntervalSince1970 * 1000,
+             baseDate.timeIntervalSince1970 * 1000,
+         ]
+ 
+@@ -142,23 +105,20 @@ struct FilterExample: View {
+             CLLocationCoordinate2D(latitude: 37.795, longitude: -122.394),
+         ]
+ 
+-        let features: [Feature] = zip(sfCoordinates, timestamps).enumerated().map { (index, element) in
+-            let (coordinate, timestamp) = element
+-            let category = index % 2 == 0 ? "restaurant" : "bar"
+-            var feature = Feature(geometry: Point(coordinate))
+-            feature.properties = [
+-                "name": .string("SF Location \(index + 1)"),
+-                "timestamp": .number(timestamp),
+-                "category": .string(category),
+-            ]
+-            return feature
+-        }
+-
+-        let featureCollection = FeatureCollection(features: features)
+-        var geoJSONSource = GeoJSONSource(id: sourceID)
+-        geoJSONSource.data = .featureCollection(featureCollection)
++        let features: [Feature] = zip(sfCoordinates, timestamps).enumerated()
++            .map { (index, element) in
++                let (coordinate, timestamp) = element
++                let category = index % 2 == 0 ? "restaurant" : "bar"
++                var feature = Feature(geometry: Point(coordinate))
++                feature.properties = [
++                    "name": .string("SF Location \(index + 1)"),
++                    "timestamp": .number(timestamp),
++                    "category": .string(category),
++                ]
++                return feature
++            }
+ 
+-        return (geoJSONSource, sfCoordinates)
++        return FeaturesRef(features)
+     }
+ }
+ 
+diff --git a/Sources/Examples/SwiftUI Examples/SwiftUIRoot.swift b/Sources/Examples/SwiftUI Examples/SwiftUIRoot.swift
+index b04933a610..2e5ec172c4 100644
+--- a/Sources/Examples/SwiftUI Examples/SwiftUIRoot.swift	
++++ b/Sources/Examples/SwiftUI Examples/SwiftUIRoot.swift	
+@@ -21,6 +21,7 @@ struct SwiftUIExamples {
+             Example("View Annotations", note: "Add/remove view annotation on tap.", destination: ViewAnnotationsExample())
+             Example("Weather annotations", note: "Show view annotations with contents changed on selection.", destination: WeatherAnnotationExample())
+             Example("Layer Annotations", note: "Add/remove layer annotation on tap.", destination: AnnotationsExample())
++            Example("Filter layer", note: "Filter layer.", destination: FilterExample())
+         },
+         Examples.Category("Use cases") {
+ #if !os(visionOS)

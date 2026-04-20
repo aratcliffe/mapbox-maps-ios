@@ -21,6 +21,8 @@ struct SwiftUIExamples {
             Example("View Annotations", note: "Add/remove view annotation on tap.", destination: ViewAnnotationsExample())
             Example("Weather annotations", note: "Show view annotations with contents changed on selection.", destination: WeatherAnnotationExample())
             Example("Layer Annotations", note: "Add/remove layer annotation on tap.", destination: AnnotationsExample())
+            Example("Filter layer", note: "Filter layer.", destination: FilterExample())
+            Example("Arc Annotation", note: "Draw a dashed curved arc between two points.", destination: ArcAnnotationExample())
         },
         Examples.Category("Use cases") {
 #if !os(visionOS)
