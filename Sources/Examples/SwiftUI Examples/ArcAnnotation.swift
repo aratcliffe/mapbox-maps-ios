@@ -28,9 +28,9 @@ struct ArcAnnotation: MapStyleContent {
     var lineOpacity: Double
     var lineDashArray: [Double]
     var layerSlot: Slot?
-
+    
     private let arcID: String
-
+    
     init(
         start: CLLocationCoordinate2D,
         end: CLLocationCoordinate2D,
@@ -50,16 +50,16 @@ struct ArcAnnotation: MapStyleContent {
         self.layerSlot = slot
         self.arcID = id ?? "\(start.latitude),\(start.longitude)-\(end.latitude),\(end.longitude)"
     }
-
+    
     var body: some MapStyleContent {
         let coordinates = computeArcPoints(from: start, to: end)
-
+        
         GeoJSONSource(id: "arc-source-\(arcID)")
             .data(.geometry(.lineString(LineString(coordinates))))
-
+        
         makeLineLayer()
     }
-
+    
     private func makeLineLayer() -> LineLayer {
         var layer = LineLayer(id: "arc-layer-\(arcID)", source: "arc-source-\(arcID)")
         layer.lineColor = .constant(lineColor)
@@ -68,6 +68,7 @@ struct ArcAnnotation: MapStyleContent {
         layer.lineDasharray = .constant(lineDashArray)
         layer.lineCap = .constant(.round)
         layer.lineJoin = .constant(.round)
+        layer.lineEmissiveStrength = .constant(1.0)
         layer.slot = layerSlot
         return layer
     }
@@ -83,26 +84,41 @@ private func computeArcPoints(
     to end: CLLocationCoordinate2D
 ) -> [CLLocationCoordinate2D] {
     let distanceMeters = start.distance(to: end)
-
+    
     let arcHeight: Double
     switch distanceMeters {
     case ..<10:  arcHeight = distanceMeters * 0.35
     case ..<100: arcHeight = distanceMeters * 0.25
     default:     arcHeight = min(distanceMeters * 0.05, 8.0)
     }
-
+    
     let mid = CLLocationCoordinate2D(
         latitude: (start.latitude + end.latitude) / 2,
         longitude: (start.longitude + end.longitude) / 2
     )
     let lineBearing = start.direction(to: end)
-
-    let dx = end.longitude - start.longitude
-    let dy = end.latitude - start.latitude
-    let offsetAngle = (dx * dy >= 0) ? 90.0 : -90.0
-
+    
+    // Normalize bearing to 0..<360 range
+    var normalizedBearing = lineBearing
+    if normalizedBearing < 0 {
+        normalizedBearing += 360.0
+    }
+    
+    // Apply the quadrant rules for convex/concave arcs
+    let offsetAngle: Double
+    switch normalizedBearing {
+    case 0..<90:
+        offsetAngle = 90.0
+    case 90..<180:
+        offsetAngle = -90.0
+    case 180..<270:
+        offsetAngle = 90.0
+    default:
+        offsetAngle = -90.0
+    }
+    
     let control = mid.coordinate(at: arcHeight, facing: lineBearing + offsetAngle)
-
+    
     var points: [CLLocationCoordinate2D] = []
     for i in 0...100 {
         let t = Double(i) / 100.0
